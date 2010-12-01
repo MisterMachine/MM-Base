@@ -27,34 +27,22 @@
 
 	<div id="header" class="container_16 clearfix">
     
-    <div id="header-wrp" class="grid_16">
 	    <h1><a href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?></a></h1>
 	    
-	    <!--<?php get_search_form(); ?>-->
+	    <?php get_search_form(); ?>
 	    
-			<div id="nav" class="grid_12"><!-- START nav -->
-				<ul>
-					<li id="selected"><a href="logistics.html">Logistics</a></li>
-					<li><a href="character.html">Character Information</a></li>
-					<li><a href="sign-up.html">Sign Up</a></li>
-					<li><a href="forum.html">Forum</a></li>
-					<li><a href="credits.html">Credits</a></li>
-					<li class="last"><a href="documentation.html">Documentation</a></li>
-				</ul>
-			</div><!--END nav -->
-			
-	  </div>
-  </div>
-  
-  <div id="content" class="fluid">
-  	
-  	<div id="framer" class="container_16 clearfix">
-  	 <div id="banner" class="grid_16"></div>
+		<div id="nav" class="grid_12"><!-- START nav -->
+			<ul>
+				<li id="selected"><a href="logistics.html">Logistics</a></li>
+				<li><a href="character.html">Character Information</a></li>
+				<li><a href="sign-up.html">Sign Up</a></li>
+				<li><a href="forum.html">Forum</a></li>
+				<li><a href="credits.html">Credits</a></li>
+				<li class="last"><a href="documentation.html">Documentation</a></li>
+			</ul>
+		</div><!--END nav -->
+
+  	</div>
+
+  	<div id="content" class="container_16 clearfix">
   	 
-  	 <div id="wrp-sigin-up" class="grid_16">
-  	     <form id="sign-up" action="">
-  	     <h3>Sign Up for Our Newsletter Now!</h3>
-  	     <input class="mailer" type="text" />
-  	     <input type="image" src="../img/" />
-  	     </form>
-  	 </div>

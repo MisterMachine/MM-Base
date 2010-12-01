@@ -5,35 +5,25 @@
  */
 
 get_header(); ?>
-
-	<div id="p-about" class="">
-	
-	<div id="side-pic" class="sidebar grid_6">
-	   <div class="shadow">
-	       <div class="inner">
-	           <div class="shadow-img cast">
-
-	           </div>
-	       </div>
-	   </div>
-	</div>
 	    		
-		<div class="main grid_10">
+		<div class="main section grid_10">
 		
 		    <?php if (have_posts()) : ?>
 		
 		        <?php while (have_posts()) : the_post(); ?>
 		
 		        <div <?php post_class() ?> id="post-<?php the_ID(); ?>">
-		            <h4><a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h4>
-		            <?php the_time('F jS, Y') ?> 
-		            <?php the_author() ?>
+		            <h3><a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
+		            <div class="byline">
+		            	<span class="time"><?php the_time('F jS, Y') ?></span> 
+		            	<span class="name"> <?php the_author() ?></span> 
+		            </div>
 		
 		            <div class="entry">
 		                <?php the_content('Read the rest of this entry &raquo;'); ?>
 		            </div>
 		
-		            <!--<p class="postmetadata"><?php the_tags('Tags: ', ', ', '<br />'); ?> Posted in <?php the_category(', ') ?> | <?php edit_post_link('Edit', '', ' | '); ?>  <?php comments_popup_link('No Comments &#187;', '1 Comment &#187;', '% Comments &#187;'); ?></p>-->
+		            <p class="postmetadata"><?php the_tags('Tags: ', ', ', '<br />'); ?> Posted in <?php the_category(', ') ?> | <?php edit_post_link('Edit', '', ' | '); ?>  <?php comments_popup_link('No Comments &#187;', '1 Comment &#187;', '% Comments &#187;'); ?></p>
 		        </div>
 		
 		        <?php endwhile; ?>
@@ -48,6 +38,8 @@ get_header(); ?>
 		
 		    <?php endif; ?>
 		
+	<div class="sidebar aside grid_6">
+	    <?php get_sidebar(); ?>
 	</div>
 
 <?php get_footer(); ?>

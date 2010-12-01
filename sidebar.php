@@ -5,7 +5,7 @@
  */
 ?>
 
-<div class="sidebar grid_6">
+<div class="sidebar aside grid_6">
 	<ul>
 	    <?php /* if using widgets */
 	        if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar() ) : ?>
