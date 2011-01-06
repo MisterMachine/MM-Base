@@ -26,7 +26,8 @@ function add_site_scripts() {
 
 	if (!is_admin()) {
 		wp_enqueue_script( 'modernizr', JS . '/modernizr-1.6.min.js', array('jquery') ); // keep modernizer in header
-		wp_enqueue_script( 'jquery', FALSE, array(), FALSE, TRUE );
+		wp_enqueue_script( 'jquery', 'ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.js', array(), FALSE, TRUE ); // Load jQuery from Google CDN
+		wp_enqueue_script( 'jquery', FALSE, array(), FALSE, TRUE ); // Fall back to local copy of jQuery if neccessary
 		wp_enqueue_script( 'app', JS . '/app.js', array('jquery'), FALSE, TRUE );
 	}
 
