@@ -18,16 +18,16 @@ function add_site_styles(){
 
 /**
  * add_site_scripts function.
- * Add site scripts to the head of the theme
+ * Add site scripts to the theme. Most will go in Footer for fastest loading.
  * @access public
  * @return void
  */
 function add_site_scripts() {
 
 	if (!is_admin()) {
-		wp_enqueue_script( 'jquery' );
-		wp_enqueue_script( 'modernizr', JS . '/modernizr-1.6.min.js', array('jquery') );
-		wp_enqueue_script( 'app', JS . '/app.js', array('jquery') );
+		wp_enqueue_script( 'modernizr', JS . '/modernizr-1.6.min.js', array('jquery') ); // keep modernizer in header
+		wp_enqueue_script( 'jquery', FALSE, array(), FALSE, TRUE );
+		wp_enqueue_script( 'app', JS . '/app.js', array('jquery'), FALSE, TRUE );
 	}
 
 }
