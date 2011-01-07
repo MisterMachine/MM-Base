@@ -1,7 +1,7 @@
 <?php
 /**
  * @package WordPress
- * @subpackage mm-base
+ * @subpackage 
  */
 
 get_header(); ?>
@@ -20,9 +20,9 @@ get_header(); ?>
 		</div>
 		<?php endwhile; endif; ?>
 	<?php edit_post_link('Edit this entry.', '<p>', '</p>'); ?>
-	
+
 	<?php comments_template(); ?>
-	
+
 	</div>
 
 <?php get_sidebar(); ?>

@@ -1,4 +1,9 @@
 <?php
+/**
+ * @package WordPress
+ * @subpackage 
+*/
+
 require_once('classes/mmbase.php');
 MMBase::init();
 
@@ -42,5 +47,14 @@ function add_site_scripts() {
 function new_excerpt_more($more) {
 	return '...';
 }
+
+// Add Theme style sheets
+add_action('wp_print_styles', 'add_site_styles');
+
+// Add Theme Scripts
+add_action('wp_print_scripts', 'add_site_scripts');
+
+// Modify the default expert more symbol
+add_filter('excerpt_more', 'new_excerpt_more');
 
 ?>

@@ -1,7 +1,7 @@
 <?php
 /**
  * @package WordPress
- * @subpackage mm-base
+ * @subpackage 
  */
 
 if ( post_password_required() ) : ?>
@@ -51,26 +51,26 @@ if ( post_password_required() ) : ?>
 <?php else : ?>
 <div id="comment-user-details"> <?php do_action('alt_comment_login'); ?>
 <p>
-    <input type="text" name="author" id="author" value="<?php echo esc_attr($comment_author); ?>" size="22" tabindex="1" />
-    <label for="author"><small><?php _e('Name'); ?> <?php if ($req) _e('(required)'); ?></small></label>
+	<input type="text" name="author" id="author" value="<?php echo esc_attr($comment_author); ?>" size="22" tabindex="1" />
+	<label for="author"><small><?php _e('Name'); ?> <?php if ($req) _e('(required)'); ?></small></label>
 </p>
 <p>
-    <input type="text" name="email" id="email" value="<?php echo esc_attr($comment_author_email); ?>" size="22" tabindex="2" />
-    <label for="email"><small><?php _e('Mail (will not be published)');?> <?php if ($req) _e('(required)'); ?></small></label>
+	<input type="text" name="email" id="email" value="<?php echo esc_attr($comment_author_email); ?>" size="22" tabindex="2" />
+	<label for="email"><small><?php _e('Mail (will not be published)');?> <?php if ($req) _e('(required)'); ?></small></label>
 </p>
 <p>
-    <input type="text" name="url" id="url" value="<?php echo esc_attr($comment_author_url); ?>" size="22" tabindex="3" />
-    <label for="url"><small><?php _e('Website'); ?></small></label>
+	<input type="text" name="url" id="url" value="<?php echo esc_attr($comment_author_url); ?>" size="22" tabindex="3" />
+	<label for="url"><small><?php _e('Website'); ?></small></label>
 </p>
 </div>
 <?php endif; ?>
 
 <p>
-    <textarea name="comment" id="comment" cols="58" rows="10" tabindex="4"></textarea>
+	<textarea name="comment" id="comment" cols="58" rows="10" tabindex="4"></textarea>
 </p>
 <p>
-    <input name="submit" type="submit" id="submit" tabindex="5" value="<?php esc_attr_e('Submit Comment'); ?>" />
-    <input type="hidden" name="comment_post_ID" value="<?php echo $id; ?>" />
+	<input name="submit" type="submit" id="submit" tabindex="5" value="<?php esc_attr_e('Submit Comment'); ?>" />
+	<input type="hidden" name="comment_post_ID" value="<?php echo $id; ?>" />
 </p>
 
 <?php do_action('comment_form', $post->ID); ?>

@@ -1,7 +1,7 @@
 <?php
 /**
  * @package WordPress
- * @subpackage mm-base
+ * @subpackage 
  */
 
 get_header();
