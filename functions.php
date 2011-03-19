@@ -7,6 +7,7 @@
 require_once('classes/mmbase.php');
 MMBase::init();
 
+
 /**
 * add_site_styles function.
 * Add site styles to the head of the theme
@@ -29,11 +30,16 @@ function add_site_styles(){
  */
 function add_site_scripts() {
 
+?>
+<script type="text/javascript">
+	var AJAX_URL = '<?php echo admin_url('admin-ajax.php'); ?>';
+</script>
+<?php
+	
 	if (!is_admin()) {
 		wp_enqueue_script( 'modernizr', JS . '/modernizr-1.6.min.js', array('jquery') ); // keep modernizer in header
-		wp_enqueue_script( 'jquery', 'ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.js', array(), FALSE, TRUE ); // Load jQuery from Google CDN
-		wp_enqueue_script( 'jquery', FALSE, array(), FALSE, TRUE ); // Fall back to local copy of jQuery if neccessary
-		wp_enqueue_script( 'app', JS . '/app.js', array('jquery'), FALSE, TRUE );
+		wp_enqueue_script( 'jquery-cdn', 'http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.js', array(), FALSE, TRUE ); // Load in footer from Google CDN
+		wp_enqueue_script( 'app', JS . '/app.js', array('jquery-cdn'), FALSE, TRUE );
 	}
 
 }
