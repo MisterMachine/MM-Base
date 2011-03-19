@@ -39,6 +39,6 @@ class MMBase {
 		
 		do_action( 'enviroment' ); // Available action: load_enviroment
 	}
-		
+
 } // end of MMBase;
 ?>
