@@ -37,8 +37,8 @@ function add_site_scripts() {
 <?php
 	
 	if (!is_admin()) {
-		wp_enqueue_script( 'modernizr', JS . '/modernizr-1.6.min.js', array('jquery') ); // keep modernizer in header
-		wp_enqueue_script( 'jquery-cdn', 'http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.js', array(), FALSE, TRUE ); // Load in footer from Google CDN
+		wp_enqueue_script( 'modernizr', JS . '/modernizr-1.7.min.js', array() ); // keep modernizer in header
+		wp_enqueue_script( 'jquery-cdn', 'http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js', array(), FALSE, TRUE ); // Load in footer from Google CDN
 		wp_enqueue_script( 'app', JS . '/app.js', array('jquery-cdn'), FALSE, TRUE );
 	}
 
